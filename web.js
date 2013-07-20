@@ -4,7 +4,9 @@ app.use(express.logger());
 
 var sys=require("sys");
 var fs=require("fs");
-var content=fs.readFileSync("./index.html", "utf8");
+var buf=require("buf");
+var buf = fs.readFileSync("./index.html");
+var content = buf.toString();
 
 app.get('/', function(request, response) {
   response.send(content);
