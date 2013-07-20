@@ -4,7 +4,7 @@ app.use(express.logger());
 
 var sys=require("sys");
 var fs=require("fs");
-var buf=require("buf");
+
 var buf = fs.readFileSync("./index.html");
 var content = buf.toString();
 
